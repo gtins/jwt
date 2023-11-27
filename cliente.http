@@ -1,0 +1,13 @@
+# @name tokenacc
+
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "user":"camargo",
+    "pwd":"123"
+}
+
+###
+GET http://localhost:3000/exemplo
+x-access-token:{{tokenacc.response.body.token}}
